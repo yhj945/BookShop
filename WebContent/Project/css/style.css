@@ -1,0 +1,188 @@
+
+a.hiddenanchor{
+	display: none;
+}
+/** 包含我们两种形式的包装器 **/
+#wrapper{
+	width: 60%;
+	right: 0px;
+	min-height: 650px;	
+	margin: 0px auto;	
+	width: 500px;
+	position: relative;	
+}
+/**** 设定表单元素的样式 **/
+
+/**** 一般字体样式 ****/
+#wrapper a{
+	color: rgb(95, 155, 198);
+	text-decoration: underline;
+}
+
+#wrapper h1{
+	font-size: 48px;
+	color: rgb(6, 106, 117);
+	padding: 2px 0 10px 0;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 30px;
+}
+#wrapper h1:after{
+	content: ' ';
+	display: block;
+	width: 100%;
+	height: 2px;
+	margin-top: 10px;
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(147,184,189,0)), color-stop(20%,rgba(147,184,189,0.8)), color-stop(53%,rgba(147,184,189,1)), color-stop(79%,rgba(147,184,189,0.8)), color-stop(100%,rgba(147,184,189,0))); 
+
+}
+
+#wrapper p{
+	margin-bottom:15px;
+}
+#wrapper p:first-child{
+	margin: 0px;
+}
+#wrapper label{
+	color: rgb(64, 92, 96);
+	position: relative;
+}
+
+/**** 高级输入模式 ****/
+
+input {
+  outline: none;
+}
+
+/* 除“提交”和“复选框”外的所有输入 */
+#wrapper input:not([type="checkbox"]){
+	width: 92%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;	
+	border: 1px solid rgb(178, 178, 178);
+	
+}
+#wrapper input:not([type="checkbox"]):active,
+#wrapper input:not([type="checkbox"]):focus{
+	border: 1px solid rgba(91, 90, 90, 0.7);
+	background: rgba(238, 236, 240, 0.2);	
+
+} 
+
+/*设置两个提交按钮的样式 */
+#wrapper p.button input{
+	width: 30%;
+	cursor: pointer;	
+	background: rgb(61, 157, 179);
+	padding: 8px 5px;
+	color: #fff;
+	font-size: 24px;	
+	border: 1px solid rgb(28, 108, 122);	
+	margin-bottom: 10px;	
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+#wrapper p.button input:hover{
+	background: rgb(74, 179, 198);
+}
+#wrapper p.button input:active,
+#wrapper p.button input:focus{
+	background: rgb(40, 137, 154);
+	position: relative;
+	top: 1px;
+	border: 1px solid rgb(12, 76, 87);	
+}
+p.login.button,
+p.signin.button{
+	text-align: right;
+	margin: 5px 0;
+}
+
+
+/* 设置“保持登录”复选框的样式*/
+.keeplogin{
+	margin-top: -5px;
+}
+.keeplogin input,
+.keeplogin label{
+	display: inline-block;
+	font-size: 12px;	
+	font-style: italic;
+}
+.keeplogin input#loginkeeping{
+	margin-right: 5px;
+}
+.keeplogin label{
+	width: 80%;
+}
+
+
+/*设定连结的样式，以便从一个表单变更为另一个表单 */
+
+p.change_link{
+	position: absolute;
+	color: rgb(127, 124, 124);
+	left: 0px;
+	height: 20px;
+	width: 440px;
+	padding: 17px 30px 20px 30px;
+	font-size: 16px	;
+	text-align: right;
+	border-top: 1px solid rgb(219, 229, 232);
+	background: rgb(225, 234, 235);
+	
+}
+
+/** 两个表单的样式 **/
+#register, 
+#login{
+	position: absolute;
+	top: 19px;
+	width: 88%;
+	padding: 18px 6% 60px 6%;
+	margin: 0 0 35px 0;
+	background: rgb(247, 247, 247);
+	border: 1px solid rgba(147, 184, 189,0.8);
+	left: -57px;
+}
+#register{	
+	z-index: 21;
+	opacity: 0;
+}
+#login{
+	z-index: 22;
+}
+/** 两个表单的切换 **/
+#toregister:target ~ #wrapper #register,
+#tologin:target ~ #wrapper #login{
+	z-index: 22;
+	-webkit-animation-name: fadeInLeft;
+
+	-webkit-animation-delay: .1s;
+
+}
+#toregister:target ~ #wrapper #login,
+#tologin:target ~ #wrapper #register{
+	-webkit-animation-name: fadeOutLeft;
+
+}
+
+/** 切换动画 ***/
+.animate{
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-fill-mode: both;
+
+}
+
+/** 过渡动画 **/
+@-webkit-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}

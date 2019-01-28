@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+#code{
+	background-color:transparent;
+	width:40%;
+	min-width:450px;
+	height:535px;
+	position:fixed;
+	left:30%;
+	top:29%;
+	border-radius: 10px;
+	font-size:16px;
+	line-height:22px;
+	font-weitht:bold;
+}
+.key1{
+	color:#FFFFFF;
+	font-size:50px;
+}
+.key2{
+	color:#FFFFFF;
+	font-size:20px;
+}
+.key3{
+	color:#FFFFFF;
+	font-size:20px;
+}
+.key3:hover{
+	color:#b9b9f9;
+}
+a{text-decoration: none;}    		//这个是设置a标签的默认状态去除下划线
+a:visited{text-decoration: none;}    //这个是设置a标签的访问过后的状态去除下划线a:hover
+ {text-decoration: none;}    		//这个是设置a标签的鼠标覆盖状态去除下划线
+a:active{text-decoration:none;} 	//这个是设置a标签的活跃状态去除下划线
