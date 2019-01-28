@@ -1,6 +1,6 @@
 # BookShop
 Servlet+JSP+JavaBean开发模式(MVC)的书店商城项目
-开发环境：win7 64位、MyEclipse10 、WebStorm、JDK1.7、 Tomcat7.0
+开发环境：win7 64位、MyEclipse10 、WebStorm、JDK1.7、 Tomcat7.0、SQL Server2008
 前端技术：使用HTML、CSS、Javascript、Jquery技术提高系统的友好性、可操作性以及用户交互体验效果。
 后端技术：使用Jsp、Servlet、Java Bean的典型MVC架构进行后台开发。
 功能模块：注册、登录、首页、订单详情、购物车、个人中心、管理后台。
